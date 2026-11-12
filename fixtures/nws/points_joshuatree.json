@@ -1,0 +1,112 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "s": "https://schema.org/",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#",
+            "geometry": {
+                "@id": "s:GeoCoordinates",
+                "@type": "geo:wktLiteral"
+            },
+            "city": "s:addressLocality",
+            "state": "s:addressRegion",
+            "distance": {
+                "@id": "s:Distance",
+                "@type": "s:QuantitativeValue"
+            },
+            "bearing": {
+                "@type": "s:QuantitativeValue"
+            },
+            "value": {
+                "@id": "s:value"
+            },
+            "unitCode": {
+                "@id": "s:unitCode",
+                "@type": "@id"
+            },
+            "forecastOffice": {
+                "@type": "@id"
+            },
+            "forecastGridData": {
+                "@type": "@id"
+            },
+            "publicZone": {
+                "@type": "@id"
+            },
+            "county": {
+                "@type": "@id"
+            }
+        }
+    ],
+    "id": "https://api.weather.gov/points/33.8819,-115.9007",
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -115.9007,
+            33.8819
+        ]
+    },
+    "properties": {
+        "@id": "https://api.weather.gov/points/33.8819,-115.9007",
+        "@type": "wx:Point",
+        "cwa": "PSR",
+        "type": "land",
+        "forecastOffice": "https://api.weather.gov/offices/PSR",
+        "gridId": "PSR",
+        "gridX": 22,
+        "gridY": 97,
+        "forecast": "https://api.weather.gov/gridpoints/PSR/22,97/forecast",
+        "forecastHourly": "https://api.weather.gov/gridpoints/PSR/22,97/forecast/hourly",
+        "forecastGridData": "https://api.weather.gov/gridpoints/PSR/22,97",
+        "observationStations": "https://api.weather.gov/gridpoints/PSR/22,97/stations",
+        "relativeLocation": {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.0659905,
+                    34.147804
+                ]
+            },
+            "properties": {
+                "city": "Twentynine Palms",
+                "state": "CA",
+                "distance": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 23129.907368927
+                },
+                "bearing": {
+                    "unitCode": "wmoUnit:degree_(angle)",
+                    "value": 152
+                }
+            }
+        },
+        "forecastZone": "https://api.weather.gov/zones/forecast/CAZ561",
+        "county": "https://api.weather.gov/zones/county/CAC065",
+        "fireWeatherZone": "https://api.weather.gov/zones/fire/CAZ230",
+        "timeZone": "America/Los_Angeles",
+        "radarStation": "KNKX",
+        "astronomicalData": {
+            "sunrise": "2026-11-12T06:13:20-08:00",
+            "sunset": "2026-11-12T16:42:13-08:00",
+            "transit": "2026-11-12T11:27:46-08:00",
+            "civilTwilightBegin": "2026-11-12T05:47:03-08:00",
+            "civilTwilightEnd": "2026-11-12T17:08:30-08:00",
+            "nauticalTwilightBegin": "2026-11-12T05:17:03-08:00",
+            "nauticalTwilightEnd": "2026-11-12T17:38:30-08:00",
+            "astronomicalTwilightBegin": "2026-11-12T04:47:31-08:00",
+            "astronomicalTwilightEnd": "2026-11-12T18:08:02-08:00"
+        },
+        "nwr": {
+            "transmitter": "KIG78",
+            "sameCode": "006065",
+            "areaBroadcast": "https://api.weather.gov/radio/KIG78/broadcast",
+            "pointBroadcast": "https://api.weather.gov/points/33.8819,-115.9007/radio"
+        }
+    }
+}

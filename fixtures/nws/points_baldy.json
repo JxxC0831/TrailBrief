@@ -1,0 +1,112 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "s": "https://schema.org/",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#",
+            "geometry": {
+                "@id": "s:GeoCoordinates",
+                "@type": "geo:wktLiteral"
+            },
+            "city": "s:addressLocality",
+            "state": "s:addressRegion",
+            "distance": {
+                "@id": "s:Distance",
+                "@type": "s:QuantitativeValue"
+            },
+            "bearing": {
+                "@type": "s:QuantitativeValue"
+            },
+            "value": {
+                "@id": "s:value"
+            },
+            "unitCode": {
+                "@id": "s:unitCode",
+                "@type": "@id"
+            },
+            "forecastOffice": {
+                "@type": "@id"
+            },
+            "forecastGridData": {
+                "@type": "@id"
+            },
+            "publicZone": {
+                "@type": "@id"
+            },
+            "county": {
+                "@type": "@id"
+            }
+        }
+    ],
+    "id": "https://api.weather.gov/points/34.2889,-117.61",
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -117.61,
+            34.2889
+        ]
+    },
+    "properties": {
+        "@id": "https://api.weather.gov/points/34.2889,-117.61",
+        "@type": "wx:Point",
+        "cwa": "SGX",
+        "type": "land",
+        "forecastOffice": "https://api.weather.gov/offices/SGX",
+        "gridId": "SGX",
+        "gridX": 52,
+        "gridY": 85,
+        "forecast": "https://api.weather.gov/gridpoints/SGX/52,85/forecast",
+        "forecastHourly": "https://api.weather.gov/gridpoints/SGX/52,85/forecast/hourly",
+        "forecastGridData": "https://api.weather.gov/gridpoints/SGX/52,85",
+        "observationStations": "https://api.weather.gov/gridpoints/SGX/52,85/stations",
+        "relativeLocation": {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.6275788,
+                    34.3459882
+                ]
+            },
+            "properties": {
+                "city": "Wrightwood",
+                "state": "CA",
+                "distance": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 4542.7497836768
+                },
+                "bearing": {
+                    "unitCode": "wmoUnit:degree_(angle)",
+                    "value": 165
+                }
+            }
+        },
+        "forecastZone": "https://api.weather.gov/zones/forecast/CAZ055",
+        "county": "https://api.weather.gov/zones/county/CAC071",
+        "fireWeatherZone": "https://api.weather.gov/zones/fire/CAZ255",
+        "timeZone": "America/Los_Angeles",
+        "radarStation": "KSOX",
+        "astronomicalData": {
+            "sunrise": "2026-11-12T06:20:56-08:00",
+            "sunset": "2026-11-12T16:48:17-08:00",
+            "transit": "2026-11-12T11:34:37-08:00",
+            "civilTwilightBegin": "2026-11-12T05:54:31-08:00",
+            "civilTwilightEnd": "2026-11-12T17:14:42-08:00",
+            "nauticalTwilightBegin": "2026-11-12T05:24:22-08:00",
+            "nauticalTwilightEnd": "2026-11-12T17:44:52-08:00",
+            "astronomicalTwilightBegin": "2026-11-12T04:54:42-08:00",
+            "astronomicalTwilightEnd": "2026-11-12T18:14:32-08:00"
+        },
+        "nwr": {
+            "transmitter": "WXM66",
+            "sameCode": "006071",
+            "areaBroadcast": "https://api.weather.gov/radio/WXM66/broadcast",
+            "pointBroadcast": "https://api.weather.gov/points/34.2889,-117.61/radio"
+        }
+    }
+}                                                                                                                                  
