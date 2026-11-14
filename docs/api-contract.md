@@ -34,7 +34,8 @@ Envelope (same shape for every provider):
 |---|---|---|---|
 | time | ISO 8601 with local offset | no | startTime |
 | temp_f | int | no | temperature (converted if unit is C) |
-| wind_mph | int | yes | windSpeed, upper bound of range |
+| wind_mph | int | yes | windSpeed, upper bound of range, calm -> 0, for rule evaluation|
+| wind_text | string | yes | windSpeed, verbatim (e.g. "5 to 10 mph"); for display only|
 | wind_dir | string | yes | windDirection |
 | precip_pct | int | yes | probabilityOfPrecipitation.value |
 | humidity_pct | int | yes | relativeHumidity.value |

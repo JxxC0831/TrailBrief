@@ -23,7 +23,7 @@
 |---|---|---|---|
 | startTime | ISO 8601 with offset | no | time |
 | temperature + temperatureUnit | int + "F" | no | temp_f |
-| windSpeed | string, e.g. "5 mph". NWS also emits a range form "5 to 10 mph" (seen in docs, not in 2026-11-12 fixtures); parser must handle both | no | wind_mph |
+| windSpeed | string, e.g. "5 mph". NWS also emits a range form "5 to 10 mph" (seen in docs, not in 2026-11-12 fixtures); parser must handle both | no | wind_mph, wind_text |
 | windDirection | string | yes - empty string when 0 mph | wind_dir |
 | probabilityOfPrecipitation.value | int | **yes** | precip_pct |
 | relativeHumidity.value | int | no | humidity_pct |
