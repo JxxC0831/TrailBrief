@@ -1,5 +1,6 @@
 import httpx
 import re
+import math
 
 USER_AGENT = "TrailBrief (jaypersonal2001@gmail.com)"
 
@@ -24,5 +25,23 @@ def _parse_wind(s) -> int | None:
     if not nums:
         return 0 if 'calm' in s.lower() else None
     return max(int(n) for n in nums)
+
+def _normalize_period(p: dict) -> dict:
+    """one NWS period -> one HourlyWeather dict"""
+    temp = p["temperature"]
+    if p["temperatureUnit"] == "C":
+        temp = round(temp * 9 / 5 + 32)
+
+    return {
+        "time": p["startTime"],
+        "temp_f": temp,
+        "wind_mph": _parse_wind(p["windSpeed"]),
+        "wind_text": p.get("windSpeed"),
+        "wind_dir": p.get("windDirection") or None ,
+        "precip_pct": p.get("probabilityOfPrecipitation", {}).get("value"),
+        "humidity_pct": p.get("relativeHumidity", {}).get("value"),
+        "short_forecast": p["shortForecast"]
+
+    }
 
     
