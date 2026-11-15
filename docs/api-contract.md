@@ -32,7 +32,7 @@ Envelope (same shape for every provider):
 
 | Field | Type | Nullable | Source |
 |---|---|---|---|
-| time | ISO 8601 with local offset | no | startTime |
+| time | ISO 8601 with local offset,non-padded forms like 2027-1-1 are also accepted | no | startTime |
 | temp_f | int | no | temperature (converted if unit is C) |
 | wind_mph | int | yes | windSpeed, upper bound of range, calm -> 0, for rule evaluation|
 | wind_text | string | yes | windSpeed, verbatim (e.g. "5 to 10 mph"); for display only|
